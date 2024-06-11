@@ -11,7 +11,7 @@ public class UserService {
 
     public List<User> userList;
 
-    public UserService(){
+    public UserService() {
         userList = new ArrayList<>();
 
         User user1 = new User(1, "IC", "Ich", 34);
@@ -27,13 +27,18 @@ public class UserService {
         userList.add(user5);
     }
 
+
     public User getUser(Integer id) {
 
-        for (User user: userList) {
+        for (User user : userList) {
             if (id == user.getId())
                 return user;
         }
         return null;
+    }
+
+    public  List<User> getUsers() {
+        return userList;
     }
 
 }
