@@ -1,0 +1,52 @@
+Environment Setup
+First, ensure that you have the environment set up in Postman with the following value:
+
+Name: local
+Values:
+Key: url
+Value: http://localhost:8080
+
+This environment configuration allows you to use the {{url}} variable within your API requests to refer to your local server running at http://localhost:8080.
+
+API Documentation
+
+1. SendTGMessage (POST)
+This API endpoint sends a message with the specified parameters.
+
+HTTP Method: POST
+URL: {{url}}/api/post
+Body (raw JSON):
+JSON
+
+{
+  "test1": "my first API",
+  "test2": "elie"
+}
+
+Response: The response will depend on the implementation of your API.
+
+To run this API:
+
+Select the POST method.
+Enter the URL as {{url}}/api/post.
+In the body section, select ‘raw’ and ‘JSON’ as the language.
+Paste the provided JSON payload.
+Send the request.
+
+
+
+2. getUsers (GET)
+This API endpoint retrieves user information based on the provided ID.
+
+HTTP Method: GET
+URL: {{url}}/user?id=1
+
+Query Parameters:
+Key: id
+Value: 1 (you can chose from 1 to 5)
+Response: The response will contain user information for the user with ID that you chose.
+To run this API:
+
+Select the GET method.
+Enter the URL as {{url}}/user?id=1.
+Send the request.
