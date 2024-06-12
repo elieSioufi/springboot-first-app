@@ -1,6 +1,7 @@
 package com.testcase.controller;
 
 import com.testcase.model.User;
+import com.testcase.model.Users;
 import com.testcase.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +14,14 @@ import java.util.Map;
 @RestController
 public class UserController {
 
+    @Autowired
     public UserService userService;
 
-
-    @Autowired
-    public UserController (UserService userService) {
-        this.userService = userService;
-    }
-
+    /**
+     *
+     * @param id
+     * @return the user's information
+     */
     @GetMapping ("/user")
     public User getUser(@RequestParam int id){
         return userService.getUser(id);
@@ -36,14 +37,9 @@ public class UserController {
         return userService.getUserByAge(age);
     }
 
-
-
     @GetMapping("/Users")
-    public List<Map<String, Object>> fetchUsers() {
+    public List<Users> fetchUsers() {
         return userService.fetchUsers();
     }
-
-
-
 
 }
