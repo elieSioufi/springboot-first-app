@@ -42,4 +42,8 @@ public class UserController {
         return userService.fetchUsers();
     }
 
+    @GetMapping("/v1/users")
+     public List<Map<String, Object>> getUsersMap(){
+        return userService.getUsersMap();
+    }
 }
