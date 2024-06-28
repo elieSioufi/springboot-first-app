@@ -75,10 +75,7 @@ public class UserServiceImpl implements UserService {
 
     public List<Map<String, Object>> getUsersMap() {
         String url = "https://api.github.com/users";
-        ResponseEntity<List<Users>> response = restTemplate.exchange(
-                url, HttpMethod.GET, null, new ParameterizedTypeReference<List<Users>>() {
-                }
-        );
+        ResponseEntity<List<Users>> response = restTemplate.exchange(url, HttpMethod.GET, null, new ParameterizedTypeReference<List<Users>>() {});
         List<Users> usersList = response.getBody();
         List<Map<String, Object>> usersMapList = new ArrayList<>();
 

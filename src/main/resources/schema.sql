@@ -1,0 +1,20 @@
+CREATE TABLE USERS (
+  login VARCHAR(250),
+  id VARCHAR(250) PRIMARY KEY,
+  node_id VARCHAR(250),
+  avatar_url VARCHAR(250),
+  gravatar_id VARCHAR(250) UNIQUE,
+  url VARCHAR(250),
+  html_url VARCHAR(250),
+  followers_url VARCHAR(250),
+  following_url VARCHAR(250),
+  gists_url VARCHAR(250),
+  starred_url VARCHAR(250),
+  subscriptions_url VARCHAR(250),
+  organizations_url VARCHAR(250),
+  repos_url VARCHAR(250),
+  events_url VARCHAR(250),
+  received_events_url VARCHAR(250),
+  type VARCHAR(250),
+  site_admin BOOLEAN
+);
